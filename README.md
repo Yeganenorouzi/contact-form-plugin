@@ -42,13 +42,10 @@ The plugin provides REST API endpoints for form submission:
 - PHP 7.2 or higher
 - MySQL 5.6 or higher
 
-## License
-
-This plugin is licensed under the GPL v2 or later.
 
 ## Author
 
-Your Name
+Yegane Norouzi 
 
 ## Support
 
