@@ -1,0 +1,113 @@
+.wp-list-table .column-message {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wp-list-table .column-actions {
+    width: 100px;
+    text-align: center;
+}
+
+.wp-list-table .button-small {
+    margin: 0 5px;
+}
+
+.wp-list-table td {
+    vertical-align: middle;
+}
+
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+.wp-list-table {
+    margin-top: 20px;
+}
+
+.wp-list-table th {
+    font-weight: 600;
+}
+
+.wp-list-table td {
+    padding: 12px 10px;
+}
+
+.wp-list-table .column-id {
+    width: 60px;
+}
+
+.wp-list-table .column-email {
+    width: 180px;
+}
+
+.wp-list-table .column-created_at {
+    width: 150px;
+}
+
+/* Bulk actions styling */
+.tablenav.top {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tablenav-pages {
+    margin: 0;
+}
+
+.tablenav-pages .page-numbers {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+.tablenav-pages .page-numbers.current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* Settings page styling */
+.form-table th {
+    width: 200px;
+}
+
+.form-table td {
+    padding: 15px 10px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Message styling */
+.notice {
+    margin: 15px 0;
+}
+
+/* Checkbox column */
+.column-cb {
+    width: 30px;
+}
+
+.check-column input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Hover effects */
+.wp-list-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.wp-list-table .button-small:hover {
+    background-color: #dc3232;
+    color: #fff;
+    border-color: #dc3232;
+} 
