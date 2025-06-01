@@ -1,12 +1,10 @@
 <?php
 /**
- * Plugin Name: Contact Form Plugin
- * Plugin URI: 
- * Description: A contact form plugin with admin panel and REST API
+ * Plugin Name: Contact Capture Lite
+ * Description: A custom contact form plugin with admin panel and REST API
  * Version: 1.0.0
- * Author: Your Name
- * Author URI: 
- * Text Domain: contact-form-plugin
+ * Author: Yegane Norouzi
+ * Text Domain: Contact Capture Lite
  */
 
 // Prevent direct access
@@ -31,6 +29,7 @@ function cfp_init()
     $contact_form_admin = new Contact_Form_Admin();
     $contact_form_api = new Contact_Form_API();
 }
+
 add_action('plugins_loaded', 'cfp_init');
 
 // Activation hook

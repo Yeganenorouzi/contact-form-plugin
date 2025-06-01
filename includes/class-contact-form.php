@@ -37,27 +37,27 @@ class Contact_Form
                 <?php wp_nonce_field($this->nonce_action, $this->nonce_name); ?>
 
                 <div class="form-group">
-                    <label for="name"><?php _e('Name', 'contact-form-plugin'); ?> *</label>
+                    <label for="name"><?php _e('نام و نام خانوادگی', 'contact-form-plugin'); ?> *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email"><?php _e('Email', 'contact-form-plugin'); ?> *</label>
+                    <label for="email"><?php _e('ایمیل', 'contact-form-plugin'); ?> *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject"><?php _e('Subject', 'contact-form-plugin'); ?> *</label>
+                    <label for="subject"><?php _e('موضوع', 'contact-form-plugin'); ?> *</label>
                     <input type="text" id="subject" name="subject" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="message"><?php _e('Message', 'contact-form-plugin'); ?> *</label>
+                    <label for="message"><?php _e('پیام', 'contact-form-plugin'); ?> *</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="submit-button"><?php _e('Send Message', 'contact-form-plugin'); ?></button>
+                    <button type="submit" class="submit-button"><?php _e('ارسال پیام', 'contact-form-plugin'); ?></button>
                 </div>
 
                 <div class="form-message"></div>
@@ -73,7 +73,6 @@ class Contact_Form
             $this->validate_nonce();
             $data = $this->validate_and_sanitize_data();
             $this->save_submission($data);
-            $this->send_notification_email($data);
 
             wp_send_json_success(array(
                 'message' => __('پیام شما با موفقیت ارسال شد.', 'contact-form-plugin')
@@ -125,26 +124,6 @@ class Contact_Form
 
         if (!$result) {
             throw new Exception(__('خطا در ذخیره پیام. لطفاً دوباره تلاش کنید.', 'contact-form-plugin'));
-        }
-    }
-
-    private function send_notification_email($data)
-    {
-        $admin_email = get_option('admin_email');
-        $headers = array('Content-Type: text/html; charset=UTF-8');
-        $email_message = sprintf(
-            __('New contact form submission from %s (%s)<br><br>Subject: %s<br><br>Message:<br>%s', 'contact-form-plugin'),
-            $data['name'],
-            $data['email'],
-            $data['subject'],
-            nl2br($data['message'])
-        );
-
-        $sent = wp_mail($admin_email, __('New Contact Form Submission', 'contact-form-plugin'), $email_message, $headers);
-
-        if (!$sent) {
-            // Log error but don't throw exception as email sending is not critical
-            error_log('Failed to send contact form notification email');
         }
     }
 }

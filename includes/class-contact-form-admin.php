@@ -21,10 +21,10 @@ class Contact_Form_Admin
     public function add_admin_menu()
     {
         add_menu_page(
-            __('Contact Form Submissions', 'contact-form-plugin'),
-            __('Contact Form', 'contact-form-plugin'),
+            __('Contact Capture Lite', 'contact-form-plugin'),
+            __('Contact Capture Lite', 'contact-form-plugin'),
             'manage_options',
-            'contact-form-submissions',
+            'Contact Capture Lite',
             array($this, 'render_admin_page'),
             'dashicons-email',
             30
