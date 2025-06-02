@@ -25,22 +25,20 @@ Use the following shortcode to display the contact form on any page or post:
 [contact_form]
 ```
 
-### REST API
-The plugin provides REST API endpoints for form submission:
+- Endpoint: `/wp-json/contact-form/v1/messages`
 
-- Endpoint: `/wp-json/contact-form/v1/submit`
-- Method: POST
-- Parameters:
-  - name (string, required)
-  - email (string, required)
-  - subject (string, required)
-  - message (string, required)
+**Note:** To access the REST API endpoints, you need to install and activate the "Basic Authentication" plugin for WordPress. This plugin enables HTTP Basic Authentication for the WordPress REST API, allowing external applications to authenticate and access the API endpoints.
+
+You can install the Basic Auth plugin from:
+-  download from: https://github.com/WP-API/Basic-Auth.git
+
+After installing Basic Auth, you can authenticate API requests using your WordPress username and password.
 
 ## Requirements
 
 - WordPress 5.0 or higher
 - PHP 7.2 or higher
-- MySQL 5.6 or higher
+- Basic Authentication plugin (for REST API access)
 
 
 ## Author

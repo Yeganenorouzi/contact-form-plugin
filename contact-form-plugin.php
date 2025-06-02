@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name: Contact Capture Lite
+ * Plugin URI: https://github.com/Yeganenorouzi/contact-form-plugin.git
  * Description: A custom contact form plugin with admin panel and REST API
  * Version: 1.0.0
  * Author: Yegane Norouzi
+ * Author URI: https://github.com/yeganenorouzi
  * Text Domain: Contact Capture Lite
  */
 
